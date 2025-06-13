@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Steps:
 
-## Getting Started
+1. clone
+2. `pnpm i`
+3. `pnpm run dev`
+4. open `localhost:3000`
+5. check terminal where you did `pnpm run dev`
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+In my case it does:
 ```
+> sentry-in-the-middle-bug@0.1.0 dev /sentry-in-the-middle-bug
+> next dev --turbo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ▲ Next.js 15.3.3 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.10.132:3000
+   - Experiments (use with caution):
+     · clientTraceMetadata
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ ✓ Starting...
+ ✓ Compiled instrumentation Node.js in 13ms
+ ✓ Compiled instrumentation Edge in 15ms
+ ✓ Ready in 778ms
+ ⚠ Webpack is configured while Turbopack is not, which may cause problems.
+ ⚠ See instructions if you need to configure Turbopack:
+  https://nextjs.org/docs/app/api-reference/next-config-js/turbo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ ○ Compiling / ...
+ ✓ Compiled / in 856ms
+ ⚠ ./node_modules/.pnpm/@opentelemetry+instrumentation@0.57.2_@opentelemetry+api@1.9.0/node_modules/@opentelemetry/instrumentation/build/esm/platform/node
+Package import-in-the-middle can't be external
+The request import-in-the-middle matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install import-in-the-middle from the project directory.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+ ⚠ ./node_modules/.pnpm/@sentry+node@9.29.0/node_modules/@sentry/node/build/cjs/sdk
+Package import-in-the-middle can't be external
+The request import-in-the-middle matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install import-in-the-middle from the project directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ ⚠ ./node_modules/.pnpm/@opentelemetry+instrumentation@0.57.2_@opentelemetry+api@1.9.0/node_modules/@opentelemetry/instrumentation/build/esm/platform/node
+Package require-in-the-middle can't be external
+The request require-in-the-middle matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install require-in-the-middle from the project directory.
+```
